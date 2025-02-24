@@ -1,0 +1,8 @@
+<div class="sidebar">
+    <button (click)="selectService(undefined)">Home</button>
+    <ul>
+      <li *ngFor="let service of services" (click)="selectService(service.id)">
+        {{ service.name }} ({{ service.status }})
+      </li>
+    </ul>
+  </div>

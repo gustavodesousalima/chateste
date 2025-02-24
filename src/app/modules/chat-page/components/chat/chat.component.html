@@ -1,0 +1,14 @@
+<div class="chat-container">
+  <div *ngIf="service; else overview">
+    <h2>{{ service.name }} Analysis</h2>
+    <div *ngFor="let history of service.history">
+      <p><strong>{{ history.date }}</strong>: {{ history.details }}</p>
+    </div>
+    <p>Status: {{ service.status }}</p>
+    <p>{{ service.details }}</p>
+  </div>
+  <ng-template #overview>
+    <h2>Overview</h2>
+    <p>Select a service to see its analysis.</p>
+  </ng-template>
+</div>
